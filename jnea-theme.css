@@ -256,3 +256,22 @@ button {
     font-size: 22px;
   }
 }
+
+html,
+body {
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  padding-bottom: 90px;
+}
+
+.jnea-tool-wrap,
+.kf-wrap,
+.fuse-wrap {
+  min-height: calc(100vh - 1px);
+  padding-bottom: 120px;
+}
