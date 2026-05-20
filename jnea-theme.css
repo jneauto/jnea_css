@@ -242,8 +242,17 @@ button {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+  body {
+     padding-bottom: 140px;
+  }
 
+   .jnea-tool-wrap,
+   .kf-wrap,
+   .fuse-wrap {
+      padding-bottom: 160px;
+   }
+   
   .jne-wrap {
     padding: 16px 12px 28px;
   }
