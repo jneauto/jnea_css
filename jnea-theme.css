@@ -1,0 +1,258 @@
+/* =========================================================
+   JNE AUTOMATION - GLOBAL WEBSITE THEME
+   Shared CSS for Google Sites Embedded Apps
+   Version: 1.0
+========================================================= */
+
+:root {
+
+  /* =====================================================
+     BRAND COLORS
+  ===================================================== */
+
+  --jne-primary: #516876;
+  --jne-primary-dark: #445864;
+  --jne-secondary: #0193cf;
+
+  --jne-bg: #e5eaee;
+  --jne-surface: #f9f9f9;
+  --jne-surface-alt: #ffffff;
+
+  --jne-text: #1f2937;
+  --jne-text-muted: #6b7280;
+
+  --jne-border: #d1d5db;
+
+  --jne-chip-bg: #eef2ff;
+  --jne-chip-text: #27316f;
+  --jne-chip-border: #dde3ff;
+
+  --jne-error: #b42318;
+  --jne-success: #027a48;
+  --jne-warning: #b54708;
+
+  /* =====================================================
+     EFFECTS
+  ===================================================== */
+
+  --jne-radius-sm: 10px;
+  --jne-radius-md: 16px;
+  --jne-radius-lg: 18px;
+
+  --jne-shadow-sm: 0 4px 10px rgba(17, 24, 39, 0.05);
+  --jne-shadow-md: 0 8px 22px rgba(17, 24, 39, 0.06);
+  --jne-shadow-lg: 0 10px 30px rgba(15, 98, 254, 0.18);
+
+  /* =====================================================
+     TYPOGRAPHY
+  ===================================================== */
+
+  --jne-font: Arial, Helvetica, sans-serif;
+
+  --jne-font-size-sm: 13px;
+  --jne-font-size-md: 15px;
+  --jne-font-size-lg: 17px;
+  --jne-font-size-xl: 30px;
+
+  /* =====================================================
+     SPACING
+  ===================================================== */
+
+  --jne-space-xs: 6px;
+  --jne-space-sm: 10px;
+  --jne-space-md: 16px;
+  --jne-space-lg: 24px;
+  --jne-space-xl: 40px;
+}
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--jne-font);
+  background: var(--jne-bg);
+  color: var(--jne-text);
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.jne-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* =========================================================
+   HEADER / HERO
+========================================================= */
+
+.jne-header {
+  background: linear-gradient(
+    135deg,
+    var(--jne-secondary),
+    var(--jne-primary)
+  );
+
+  color: white;
+  padding: 28px;
+  border-radius: var(--jne-radius-lg);
+  margin-bottom: 20px;
+  box-shadow: var(--jne-shadow-lg);
+}
+
+.jne-header h1 {
+  margin: 0 0 8px;
+  font-size: var(--jne-font-size-xl);
+  line-height: 1.15;
+}
+
+.jne-header p {
+  margin: 0;
+  color: rgba(255,255,255,0.86);
+  font-size: var(--jne-font-size-md);
+}
+
+/* =========================================================
+   CARDS / PANELS
+========================================================= */
+
+.jne-card {
+  background: var(--jne-surface);
+  border: 1px solid var(--jne-border);
+  border-radius: var(--jne-radius-md);
+  padding: var(--jne-space-md);
+  box-shadow: var(--jne-shadow-md);
+}
+
+/* =========================================================
+   FORM CONTROLS
+========================================================= */
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+.jne-input,
+.jne-select,
+.jne-textarea {
+  width: 100%;
+  border: 1px solid var(--jne-border);
+  border-radius: 12px;
+  padding: 11px 12px;
+  background: white;
+  color: var(--jne-text);
+}
+
+.jne-input:focus,
+.jne-select:focus,
+.jne-textarea:focus {
+  outline: 2px solid rgba(1, 147, 207, 0.18);
+  border-color: var(--jne-secondary);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.jne-btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 11px 15px;
+  background: var(--jne-primary);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.jne-btn:hover {
+  background: var(--jne-primary-dark);
+}
+
+.jne-btn-secondary {
+  background: var(--jne-secondary);
+}
+
+.jne-btn-secondary:hover {
+  filter: brightness(0.92);
+}
+
+/* =========================================================
+   TAGS / CHIPS
+========================================================= */
+
+.jne-chip-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.jne-chip {
+  display: inline-flex;
+  border-radius: 999px;
+  background: var(--jne-chip-bg);
+  padding: 5px 8px;
+  font-size: 12px;
+  color: var(--jne-chip-text);
+  border: 1px solid var(--jne-chip-border);
+}
+
+/* =========================================================
+   STATUS BOXES
+========================================================= */
+
+.jne-empty,
+.jne-loading,
+.jne-error {
+  background: var(--jne-surface);
+  border: 1px solid var(--jne-border);
+  border-radius: var(--jne-radius-md);
+  padding: 24px;
+  text-align: center;
+  color: var(--jne-text-muted);
+}
+
+.jne-error {
+  color: var(--jne-error);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .jne-header {
+    padding: 22px;
+  }
+
+  .jne-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .jne-wrap {
+    padding: 16px 12px 28px;
+  }
+
+  .jne-header {
+    padding: 18px;
+  }
+
+  .jne-header h1 {
+    font-size: 22px;
+  }
+}
